@@ -127,8 +127,8 @@ p{margin:0}
 .hero h1{font-size:clamp(44px,5.4vw,84px);text-transform:uppercase;line-height:1.02}
 .hero-sub{font-size:clamp(17px,1.35vw,20px);font-weight:500;line-height:1.4;max-width:34em;margin:22px 0 30px;text-shadow:0 1px 12px rgba(0,0,0,.25)}
 .hero-ctas{display:flex;flex-wrap:wrap;gap:var(--gap)}
-.hero-since{position:absolute;left:var(--g);bottom:var(--g);z-index:2;font-size:15px;color:rgba(255,255,255,.8)}
-.hero-news{position:absolute;left:50%;bottom:var(--g);z-index:2;width:min(470px,calc(50% - var(--g)));background:rgba(70,74,78,.42);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);padding:24px 26px 20px;min-height:190px;display:flex;flex-direction:column}
+.hero-since{position:absolute;left:50%;bottom:var(--g);z-index:2;font-size:15px;color:rgba(255,255,255,.8)}
+.hero-news{position:absolute;left:var(--g);bottom:var(--g);z-index:2;width:min(440px,calc(50% - 2 * var(--g)));background:rgba(70,74,78,.42);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);padding:24px 26px 20px;min-height:190px;display:flex;flex-direction:column}
 .hero-news .slide{display:none;flex:1;flex-direction:column}
 .hero-news .slide.on{display:flex}
 .hero-news .top{display:flex;justify-content:space-between;gap:16px;align-items:flex-start}
@@ -480,6 +480,9 @@ fieldset.field{border:0;margin:0;padding:0}
 }
 
 /* ---------- responsive ---------- */
+@media (max-height:760px){
+  .hero-news{display:none}
+}
 @media (max-width:1520px){
   .hbtn.phone{display:none}
 }
@@ -491,8 +494,7 @@ fieldset.field{border:0;margin:0;padding:0}
   .burger{display:flex}
   .hero-in,.phero .wrap{grid-template-columns:1fr}
   .hero-copy,.phero .copy{grid-column:1}
-  .hero-news{left:var(--g);right:var(--g);width:auto;bottom:var(--g);min-height:0}
-  .hero-since{display:none}
+  .hero-news,.hero-since{display:none}
   .split,.about-grid,.req-grid,.contacts,.adv .wrap,.rig-top,.catalog{grid-template-columns:1fr}
   .acc{border-left:0;border-top:1px solid var(--line)}
   .acc-btn{padding-left:0}
@@ -521,7 +523,7 @@ fieldset.field{border:0;margin:0;padding:0}
   .logo b{font-size:21px}
   .hero{min-height:620px}
   .hero-ctas .btn{flex:1 1 100%;justify-content:space-between}
-  .hero-news,.scroll-down{display:none}
+  .scroll-down{display:none}
   .tiles,.proj,.adv-cards,.models,.opts,.form-grid,.c-list,.ticks{grid-template-columns:1fr}
   .tile.big{grid-column:auto}
   .tile.big .specs{grid-template-columns:1fr 1fr}
